@@ -8,9 +8,11 @@ using System.Drawing.Drawing2D;
 
 namespace Lab5.Objects
 {
-    class Player : BaseObject
+    public class Player : BaseObject
     {
-        public Action<Marker> OnMarkerOverlap;
+        public Action<Marker>? OnMarkerOverlap;
+        public Action<Dot>? OnDotOverlap;
+
         public float vX, vY;
         public Player(float x, float y, float angle) : base(x,y,angle)
         {
@@ -37,6 +39,10 @@ namespace Lab5.Objects
             if (obj is Marker)
             {
                 OnMarkerOverlap(obj as Marker);
+            }
+            else if (obj is Dot)
+            {
+                OnDotOverlap(obj as Dot);
             }
         }
     }

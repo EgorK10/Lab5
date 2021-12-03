@@ -32,14 +32,16 @@
             this.pbMain = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.txtLog = new System.Windows.Forms.RichTextBox();
+            this.Score_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).BeginInit();
             this.SuspendLayout();
             // 
             // pbMain
             // 
-            this.pbMain.Location = new System.Drawing.Point(4, 1);
+            this.pbMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbMain.Location = new System.Drawing.Point(3, 12);
             this.pbMain.Name = "pbMain";
-            this.pbMain.Size = new System.Drawing.Size(644, 435);
+            this.pbMain.Size = new System.Drawing.Size(579, 424);
             this.pbMain.TabIndex = 0;
             this.pbMain.TabStop = false;
             this.pbMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pbMain_Paint);
@@ -53,23 +55,35 @@
             // 
             // txtLog
             // 
-            this.txtLog.Location = new System.Drawing.Point(654, 1);
+            this.txtLog.Location = new System.Drawing.Point(599, 3);
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(213, 435);
             this.txtLog.TabIndex = 1;
             this.txtLog.Text = "";
             // 
+            // Score_Label
+            // 
+            this.Score_Label.AutoSize = true;
+            this.Score_Label.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Score_Label.Location = new System.Drawing.Point(12, 22);
+            this.Score_Label.Name = "Score_Label";
+            this.Score_Label.Size = new System.Drawing.Size(52, 18);
+            this.Score_Label.TabIndex = 2;
+            this.Score_Label.Text = "Счет: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 461);
+            this.ClientSize = new System.Drawing.Size(825, 450);
+            this.Controls.Add(this.Score_Label);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.pbMain);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -78,5 +92,6 @@
         private System.Windows.Forms.PictureBox pbMain;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.RichTextBox txtLog;
+        private System.Windows.Forms.Label Score_Label;
     }
 }
